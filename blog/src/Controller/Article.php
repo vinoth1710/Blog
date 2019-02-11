@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: Vinoth Ravindran
  * Date: 11/02/2019
- * Time: 10:32
+ * Time: 11:29
  */
 
 namespace App\Controller;
@@ -11,13 +11,13 @@ namespace App\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 
-class HomeController
+class Article
 {
     /**
-     *@Route("/")
-    */
-public function homepage(){
-    return new Response("Bonjour");
-}
+     *@Route("/Article/{page}")
+     */
+public function readarticle($page){
 
+    return new Response("Bienvenue sur mon article : $page");
+}
 }
